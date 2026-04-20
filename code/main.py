@@ -4,6 +4,7 @@ pygame.init()
 from game import Game
 from screen import Screen
 from player import Player
+from map import Tmx_map
 
 screen = Screen()
 
@@ -12,8 +13,9 @@ screen_width = screen.get_size()[0]
 
 print(screen_height)
 
-player = Player(screen_width - screen_width, screen_height - 48)
-game = Game(screen, player)
+player = Player(screen_width - screen_width, 0)
+tmx_map = Tmx_map(screen, player)
+game = Game(screen, player, tmx_map)
 
 if __name__ == "__main__":
     game.run()
