@@ -18,6 +18,9 @@ class Game:
 
                 if (event.key == pygame.K_UP):
                     self.player.move_jump()
+
+                if (event.key == pygame.K_RIGHT):
+                    self.player
                     
                 if event.key == pygame.K_ESCAPE:
                     self.running=False
@@ -27,12 +30,10 @@ class Game:
         if (pressed[pygame.K_RIGHT]):
             self.player.move_right()
         if (pressed[pygame.K_LEFT]):
-            self.player.move_left()        
-        if (pressed[pygame.K_DOWN]):
-            self.player.move_down()
-            
+            self.player.move_left()            
 
     def run(self, ):
+        self.player.save_location()
         self.running = True
         while self.running:
             self.player.update()

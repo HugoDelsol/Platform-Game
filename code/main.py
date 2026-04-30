@@ -13,7 +13,7 @@ screen_width = screen.get_size()[0]
 
 print(screen_height)
 
-player = Player(screen_width - screen_width, 0)
+player = Player(screen)
 tmx_map = Tmx_map(screen, player)
 game = Game(screen, player, tmx_map)
 
